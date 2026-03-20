@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Thử nghiệm đọc file readme
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  thuc_hanh_doc_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bước 1 - Xin chào
+        run: echo "HELLO HUTECH"
+      
+      - name: Bước 2 - Tải code
+        run: actions/checkout@v6
+
+      - name: Bước 3 - Đọc file
+        run: cat README.md
